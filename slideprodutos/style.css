@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    margin-left: 7vh;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+}
+.carousel::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.carousel-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 200px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.price {
+    color: red;
+    font-size: 1.2em;
+}
+
+.price span {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.payment {
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+button {
+    background: yellow;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.nav-button.prev {
+    left: 10px;
+}
+
+.nav-button.next {
+    right: 10px;
+}

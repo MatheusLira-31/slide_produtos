@@ -1,159 +1,127 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8"/>
-	<title>Slide Show com Seta</title>
-	<style type="text/css">
-      .slide_container{
-        display: inline-flex;
-        align-items: center;
-        justify-content: stretch;
-      }
-      
-	  #carrossel img
-	  {
-	  height:200px;
-	  width:200px;
-	  border-radius:5px;
-	  box-shadow:2px 4px 2px rgb(100,100,100);
-	  }
-	  
-	  #carrossel
-	  {
-	  height:350px;
-	  width:100%;
-	  left:0%;
-	  right:0%;
-	  margin:0%;
-	  }
-	  
-	  div
-	  {
-	    text-align:center;
-		height:auto;
-		font-size:2.5vw;
-		font-family:"Lucida Sans","Bauhaus 93","Tahoma";
-		color:rgb(255,255,255);
-
-	  }
-	  
-	  .ante
-	  {
-		left:7%;
-	  }
-	  
-	  .prox
-	  {
-		right:7%;
-	  }
-	  
-	  .ante, .prox
-	  {	
-		top:18%;
-		font-weight:bold;
-		font-size:4vw;
-		text-align:center;
-		display:in-line;
-		width:5%;
-		background-color:rgba(100,100,100,0.7);
-		position:absolute;
-	  }
-	  
-	  .ante:hover, .prox:hover
-	  {
-		background-color:rgba(200,20,20,0.7);
-		cursor:pointer;
-	  }
-	</style>
- </head>
-  <body>
-    <div class="slide_container">
-        <section id="carrossel">
-            <img src="IMG/camiseta_avatar.png" name="slide" id="slide"/>
-            <div></div>
-        </section>
-        <section id="carrossel">
-            <img src="IMG/camiseta_avatar.png" name="slide" id="slide"/>
-            <div></div>
-        </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="carousel-container" id="carousel1">
+        <button class="nav-button prev" onclick="scrollCarousel(-1, 'carousel1')">&#10094;</button>
+        <div class="carousel">
+            <div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			
+            <!-- Repita a estrutura do item do carrossel para os outros produtos -->
+        </div>
+        <button class="nav-button next" onclick="scrollCarousel(1, 'carousel1')">&#10095;</button>
+		
     </div>
-	<p class="ante" onClick="Anterior()">&#60;</p>
-	<p class="prox" onClick="Proximo()">&#62;</p>
-	
-    <script language="JavaScript">
-	var contador = 1; //variável pública criada fora da function
-	var img1="IMG/camiseta_avatar.png";
-	var img2="IMG/camiseta_disney.png";
-	var img3="IMG/camiseta_naruto.png";
-	var tempo=2000; //2000(milessegundos) : 1000 (milessegundo) = 1.5s
-	var exibir=setInterval("Exibindo()",tempo);
-	  
-	function Exibindo()
-	{
-	  	document.images["slide"].src=eval("img"+contador);
-		
-		if (contador==1)
-			document.querySelector("div").innerHTML = "Camiseta do Avatar";
-		else if (contador==2)
-			document.querySelector("div").innerHTML = "Camiseta da disney";
-		else
-			document.querySelector("div").innerHTML = "Camiseta do naruto";
-				  
-		if (contador<3)
-			contador++;
-		else
-			contador=1;
-	} 
-	  
-	function Anterior()
-	{
-		clearInterval(exibir);//interrompe o looping
-		
-		if (contador == 2)
-			contador = 3;
-		else if (contador == 3)
-			contador = 1;
-		else
-			contador = 2;
-		
-		
-		document.images["slide"].src=eval("img"+contador);
-		
-		if (contador==1)
-			document.querySelector("div").innerHTML = "Camiseta do Avatar";
-		else if (contador==2)
-			document.querySelector("div").innerHTML = "Camiseta da Disney";
-		else
-			document.querySelector("div").innerHTML = "Camiseta do Naruto";
-				  
-		if (contador<3)
-			contador++;
-		else
-			contador=1;
-				
-		exibir=setInterval("Exibindo()",tempo);
-	}
-	 
-	 function Proximo()
-	{
-		clearInterval(exibir);//interrompe o looping 
-		document.images["slide"].src=eval("img"+contador);
-		
-		if (contador==1)
-			document.querySelector("div").innerHTML = "Camiseta do Avatar";
-		else if (contador==2)
-			document.querySelector("div").innerHTML = "Camiseta da Disney";
-		else
-			document.querySelector("div").innerHTML = "Camiseta do Naruto";
+	<div class="carousel-container" id="carousel2">
+        <button class="nav-button prev" onclick="scrollCarousel(-1, 'carousel2')">&#10094;</button>
+        <div class="carousel">
+            <div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
+			<div class="carousel-item">
+                <div class="discount">33% OFF</div>
+                <img src="IMG/camiseta_avatar.png" alt="Mouse Gamer Ultraleve Fallen F65 Mercury">
+                <h2>Mouse Gamer Ultraleve Fallen F65 Mercury</h2>
+                <p class="price">De R$ 332,22<br><span>R$ 199,00</span></p>
+                <p class="payment">À vista no boleto ou pix 10% de desconto<br>ou em até 6x de R$ 36,85 s/ juros no cartão</p>
+                <button>COMPRAR</button>
+            </div>
 			
-		if (contador<3)
-			contador++;
-		else
-			contador=1;
-			
-		exibir=setInterval("Exibindo()",tempo);
-	}
-    </script>
-	</body>
+            <!-- Repita a estrutura do item do carrossel para os outros produtos -->
+        </div>
+        <button class="nav-button next" onclick="scrollCarousel(1, 'carousel2')">&#10095;</button>
+		
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
-   
